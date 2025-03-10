@@ -1,0 +1,19 @@
+local target = script.Parent
+
+-- Function to move the target to a random position
+local function moveTarget()
+    local randomX = math.random(-50, 50)
+    local randomY = math.random(5, 20) -- Height above the ground
+    local randomZ = math.random(-50, 50)
+    
+    target.Position = Vector3.new(randomX, randomY, randomZ)
+end
+
+-- Move the target initially
+moveTarget()
+
+-- Move the target every 2 seconds
+while true do
+    wait(2)
+    moveTarget()
+end
